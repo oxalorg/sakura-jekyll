@@ -1,0 +1,36 @@
+/*============================*/
+/*Helper classes*/
+/*============================*/
+
+.no-border {
+    border: 0;
+}
+
+.no-border:hover {
+    border: 0;
+}
+
+.no-list-style {
+    list-style: none;
+}
+
+/* Chronological post table */
+.chrono {
+    display: table;
+    width: 100%;
+}
+
+.chrono a {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.chrono .go-left {
+    float: left;
+    text-align: left;
+}
+
+.chrono .go-right {
+    float: right;
+    text-align: right;
+}
