@@ -8,7 +8,7 @@ title: "Blog All posts"
     {% if forloop.first %}
         <h2>{{ post_year }}</h2>
         <div>
-            <ul style="list-style-type:circle;padding-left:0px">
+            <ul>
     {% endif %}
     {% if forloop.first == false %}
         {% assign previous_index = forloop.index0 | minus: 1 %}
@@ -17,11 +17,11 @@ title: "Blog All posts"
         </div>
         <h2>{{ post_year }}</h2>
         <div>
-            <ul style="list-style-type:circle;padding-left:0px">
+            <ul>
         {% endif %}
     {% endif %}
                 <li style="padding-bottom:7px;">
-                    <a style="border-bottom: none;"href="{{ post.url }}" title="{{ post.title }}" class="">{{ post.title }}</a> <small><em><span style="color: #888"class="">-{{ post.date | date: '%d %b' }}</span></em></small>
+                    <a class="no-border" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} </a><small><em><span class="sakura-blossom inline-block">-{{ post.date | date: '%d %b' }}</span></em></small>
                 </li>
     {% if forloop.last %}
             </ul>
