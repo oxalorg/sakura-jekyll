@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Blog All posts"
+---
+
+{% for post in site.posts %}
+    {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if forloop.first %}
+        <h3>{{ post_year }}</h3><div><ul style="list-style-type:circle;padding-left:0px">
+    {% endif %}
+
+    {% if forloop.first == false %}
+        {% assign previous_index = forloop.index0 | minus: 1 %}
+        {% capture previous_post_year %}{{ site.posts[previous_index].date | date: '%Y' }}{% endcapture %}
+        {% if post_year != previous_post_year %}
+            </div><h3>{{ post_year }}</h3><div><ul style="list-style-type:circle;padding-left:0px">
+        {% endif %}
+    {% endif %}
+
+    <li style="padding-bottom:7px;"><a style="border-bottom: none;"href="{{ post.url }}" title="{{ post.title }}" class="">{{ post.title }}</a> <small><em><span style="color: #888"class="">-{{ post.date | date: '%d %b' }}</span></em></small></li>
+
+    {% if forloop.last %}
+        </ul></div>
+    {% endif %}
+{% endfor %}
