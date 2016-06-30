@@ -1,4 +1,5 @@
 permalink: /blog/:title
+sakura-jekyll-version: 0.9.0
 # Information required for feed
 title: Sakura Jekyll # Change this to your site name.
 description:
