@@ -5,6 +5,7 @@ title: Sakura Jekyll # Change this to your site name.
 description:
 url:
 author:
+    twitter: # twitter user name here
 
 date_format: "%b %d, %Y"
 
@@ -15,6 +16,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "" # Set this to default author
 
 
 # Third-party services
